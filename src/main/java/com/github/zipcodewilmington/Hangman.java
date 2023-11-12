@@ -1,6 +1,8 @@
 package com.github.zipcodewilmington;
 
 
+import java.util.Random;
+
 /**
  * @author xt0fer
  * @version 1.0.0
@@ -9,8 +11,6 @@ package com.github.zipcodewilmington;
 public class Hangman {
 
     // choose a random word from a list
-
-
 //while (you want to play) { //outer loop
     // start the game
     // set word guessed to false
@@ -43,4 +43,4 @@ public class Hangman {
 
 
 
-}
+
