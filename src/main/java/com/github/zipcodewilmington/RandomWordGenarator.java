@@ -25,9 +25,10 @@ public class RandomWordGenarator {
     public String getChosenWord() {
 
         // i want to take wordPlaceInArray
-        chosenWord = String.valueOf(wordPlaceInArray);
+        chosenWord =  randomWord[wordPlaceInArray];
         // and the use the number to call the string out from the randomWord
+        System.out.println(chosenWord.toString());
 
-        return chosenWord;
+        return chosenWord.toString();
     }
 }
