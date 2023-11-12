@@ -8,7 +8,12 @@ import org.junit.Assert;
  */
 public class HangmanTest {
 
+@Test
+    public void testrandomAnimalName(){
 
+
+
+}
 
 
    // @Test
