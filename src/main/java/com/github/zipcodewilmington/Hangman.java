@@ -43,18 +43,22 @@ public class Hangman {
         return Array[arrayNum];
     }
 
-    public static void  printWord(String word, List<Character> playerGuess) {
-
+    public static ArrayList printWord(String word, List<Character> playerGuess) {
+        List<Character> playerGuessNew = new ArrayList<>();
 
         for (int i = 0; i < word.length(); i++) {
+
             if (playerGuess.contains(word.charAt(i))) {
+                playerGuessNew.add(word.charAt(i));
                 System.out.print(word.charAt(i));
             } else {
+                playerGuessNew.add('_');
                 System.out.print("_");
 
             }
 
         }
+        return (ArrayList) playerGuessNew;
     }
 
 //     System.out.println(animalPicked); // this check the random name is working

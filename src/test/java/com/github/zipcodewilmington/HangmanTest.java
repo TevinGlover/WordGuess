@@ -43,17 +43,16 @@ public class HangmanTest {
 
     @Test
     public void TestCompareChar() {
-        List<Character> playerGuess = new ArrayList<>();
-        playerGuess.add('c');
-        playerGuess.add('a');
-        playerGuess.add('t');
+        List<Character> expected = new ArrayList<>();
+        expected.add('c');
+        expected.add('a');
+        expected.add('t');
         String hidenWord = "cat";
-       char[] word = hidenWord.toCharArray();
-       ArrayList expected = new ArrayList<>();
-       expected.add(hidenWord);
 
-         printWord(hidenWord,playerGuess);
-        Assert.assertSame(expected,playerGuess);
+       ArrayList actual = new ArrayList<>();
+       actual =  printWord(hidenWord,expected);
+
+        Assert.assertEquals(actual,expected);
 
     }
 }
