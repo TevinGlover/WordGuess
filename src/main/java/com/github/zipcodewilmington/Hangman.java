@@ -74,7 +74,7 @@ public class Hangman {
      //while (you want to play) { //outer loop
 
 
- }
+
 
 
 

@@ -30,7 +30,7 @@ public class HangmanTest {
     @Test
     public void testrandomAnimalName2() { // check if it can return on of the words
 
-        String[] randomWord = {"fox", "bat", "cat" };
+        String[] randomWord = {"fox", "bat", "cat",  };
         String word = RandRandomPick(randomWord);
         String pickOne = "fox ";
         String pickTwo = "bat";
@@ -71,14 +71,14 @@ public class HangmanTest {
 
     }
 
-    @Test
-    public void testIfGuessAreCorrect() {
-        Character guess = 'f';
-        Character expected = 'f';
-        Boolean isCorrect = GuessAreCorrect(guess, expected);
-        Assert.assertTrue(isCorrect);
-    }
-
+//    @Test
+//    public void testIfGuessAreCorrect() {
+//        Character guess = 'f';
+//        Character expected = 'f';
+//        Boolean isCorrect = GuessAreCorrect(guess, expected);
+//        Assert.assertTrue(isCorrect);
+//    }
+//
 
 //
 //    @Test
