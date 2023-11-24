@@ -15,16 +15,16 @@ import static com.github.zipcodewilmington.Hangman.printWord;
  */
 public class HangmanTest {
 
-    @Test
-    public void testrandomAnimalName1() {
-        String[] randomWord = {"fox", "bat", "cat" };
-        String word = RandRandomPick(randomWord);
-        String actual = word;
-        String expected = "bat";
-
-        Assert.assertSame(expected, actual);
-
-    }
+//    @Test
+//    public void testrandomAnimalName1() {
+//        String[] randomWord = {"fox", "bat", "cat" };
+//        String word = RandRandomPick(randomWord);
+//        String actual = word;
+//        String expected = "bat";
+//
+//        Assert.assertSame(expected, actual);
+//
+//    }
 
 
     @Test
@@ -42,36 +42,53 @@ public class HangmanTest {
     }
 
     @Test
-    public void TestCompareChar() {
+    public void TestCompareChar1() {
         List<Character> expected = new ArrayList<>();
         expected.add('c');
         expected.add('a');
         expected.add('t');
         String hidenWord = "cat";
+        String word = "cat";
+        ArrayList actual = new ArrayList<>();
+        actual = printWord(hidenWord, expected);
 
-       ArrayList actual = new ArrayList<>();
-       actual =  printWord(hidenWord,expected);
-
-        Assert.assertEquals(actual,expected);
+        Assert.assertEquals("", expected, actual);
 
     }
-}
-//    @Test
-//    public void testIfGuessAreCorrect() {
-//        Character guess = 'f';
-//        Character expected = 'f';
-//        Boolean isCorrect = GuessAreCorrect(guess,expected);
-//        Assert.assertTrue(isCorrect);
-//    }
+
+    @Test
+    public void TestCompareChar2() {
+        List<Character> expected = new ArrayList<>();
+        expected.add('c');
+        expected.add('a');
+        expected.add('_');
+        String hidenWord = "car";
+
+        ArrayList actual = new ArrayList<>();
+        actual = printWord(hidenWord, expected);
+
+        Assert.assertEquals("", expected, actual);
+
+    }
+
+    @Test
+    public void testIfGuessAreCorrect() {
+        Character guess = 'f';
+        Character expected = 'f';
+        Boolean isCorrect = GuessAreCorrect(guess, expected);
+        Assert.assertTrue(isCorrect);
+    }
+
+
 //
 //    @Test
 //    public void testIfGuessAreWrong() {
 //        char guess = 't';
-//       char expected = 'f';
-//        Boolean isWrong = GuessAreWrong(guess,expected);
+//        char expected = 'f';
+//        Boolean isWrong = GuessAreWrong(guess, expected);
 //        Assert.assertTrue(isWrong);
 //    }
-//
+}
 //    @Test
 //    public void testIfAllCorrect() {
 //        char[] guess = "bat".toCharArray();

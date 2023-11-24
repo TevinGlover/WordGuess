@@ -46,7 +46,7 @@ public class Hangman {
     public static ArrayList printWord(String word, List<Character> playerGuess) {
         List<Character> playerGuessNew = new ArrayList<>();
 
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) {// for loop the word
 
             if (playerGuess.contains(word.charAt(i))) {
                 playerGuessNew.add(word.charAt(i));
@@ -59,6 +59,11 @@ public class Hangman {
 
         }
         return (ArrayList) playerGuessNew;
+    }
+        private Boolean GuessAreCorrect(Character playerGuess, Character expected) {
+            return null;
+        }
+
     }
 
 //     System.out.println(animalPicked); // this check the random name is working
