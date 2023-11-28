@@ -5,8 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.github.zipcodewilmington.Hangman.RandRandomPick;
-import static com.github.zipcodewilmington.Hangman.printWord;
+import static com.github.zipcodewilmington.Hangman.*;
 
 /**
  * @author xt0fer
@@ -42,7 +41,7 @@ public class HangmanTest {
     }
 
     @Test
-    public void TestCompareChar1() {
+    public void TestCompareCharRight() {
         List<Character> expected = new ArrayList<>();
         expected.add('c');
         expected.add('a');
@@ -57,7 +56,7 @@ public class HangmanTest {
     }
 
     @Test
-    public void TestCompareChar2() {
+    public void TestCompareCharWrong() {
         List<Character> expected = new ArrayList<>();
         expected.add('c');
         expected.add('a');
@@ -72,7 +71,7 @@ public class HangmanTest {
     }
 
 //    @Test
-//    public void testIfGuessAreCorrect() {
+//    public void testIfGuessAreCorrectNoCount() {
 //        Character guess = 'f';
 //        Character expected = 'f';
 //        Boolean isCorrect = GuessAreCorrect(guess, expected);
@@ -80,14 +79,24 @@ public class HangmanTest {
 //    }
 //
 
-//
-//    @Test
-//    public void testIfGuessAreWrong() {
-//        char guess = 't';
-//        char expected = 'f';
-//        Boolean isWrong = GuessAreWrong(guess, expected);
-//        Assert.assertTrue(isWrong);
-//    }
+
+    @Test
+    public void testIfGuessAreWrongAddCount() {
+        List<Character> expected = new ArrayList<>();
+        expected.add('f');
+        expected.add('0');
+        expected.add('x');
+        int expectedCount = 1;
+
+        char guess = 't';
+        int actualCount = guessAreWrongAddCount(guess, expected);
+
+        Assert.assertEquals(expectedCount, actualCount);
+   }
+
+
+
+
 }
 //    @Test
 //    public void testIfAllCorrect() {

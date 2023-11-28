@@ -16,10 +16,10 @@ public class Hangman {
     public static void main(String[] args) {
         Scanner playerAnwser = new Scanner(System.in);// start the game
         //Scanner playerCharGuess = new Scanner(); // player inputs
-      String[]  animalsWithThreeLetters = "cat dog rat hen fox".split(" ");
+        String[] animalsWithThreeLetters = "cat dog rat hen fox".split(" ");
 
 
-        System.out.println("* Welcome To Animal Word Guess *" + " \n" +"  ****************************");
+        System.out.println("* Welcome To Animal Word Guess *" + " \n" + "  ****************************");
         System.out.println("  Lets play A GAME !!");
         System.out.println("  TYPE BELOW: (Yes or No)");
         playerAnwser.nextLine();
@@ -28,14 +28,15 @@ public class Hangman {
 
         if (playerAnwser.equals("YES".compareToIgnoreCase("yes"))) {
             System.out.println(" Game Starting Now"); // StartGame();
-        } else  {
+        } else {
             System.out.println(" thank you for your answer Bye!");
             System.out.println(" Game Over !!");
         }
     }
+
     //*****************************************************************
     public static String RandRandomPick(String[] Array) {
-         // for any string array
+        // for any string array
         int random = (int) (Math.random() * Array.length); // choose a random number from array
         int arrayNum = random; // the number selected form the random generator
 
@@ -60,11 +61,23 @@ public class Hangman {
         }
         return (ArrayList) playerGuessNew;
     }
-        private Boolean GuessAreCorrect(Character playerGuess, Character expected) {
-            return null;
+
+    public static int guessAreWrongAddCount(char guess, List<Character> expected) {
+      int  guessCount = 0;
+        boolean isguess = false;
+        for ( int i = 0; i< expected.size(); i++){
+            if (!expected.contains(guess)){
+            isguess =true;
+            }
+        }
+        if(isguess){
+            guessCount++;
         }
 
+        return guessCount;
     }
+}
+
 
 //     System.out.println(animalPicked); // this check the random name is working
 //
